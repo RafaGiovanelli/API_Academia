@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Academia", "API_Academia\API_Academia.csproj", "{AD196590-9A24-4A63-8532-CF6B18BC3B0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Deploy", "0 - Deploy", "{57D0D31F-8400-4B50-A4C4-309B447E6B65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apresentation", "1 - Apresentation", "{B92CFB7B-82E2-487E-8700-2C96BBFC5AC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{D2CCA856-E883-4929-ADB8-8031793AD6D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Utils", "3 - Utils", "{47003E5F-BC68-4C08-A42F-AC82F57D66BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Academia.Application", "API_Academia.Application\API_Academia.Application.csproj", "{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Academia.Models", "API_Academia.Models\API_Academia.Models.csproj", "{10974E78-31B4-4434-9643-CA4D92086500}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD196590-9A24-4A63-8532-CF6B18BC3B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD196590-9A24-4A63-8532-CF6B18BC3B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD196590-9A24-4A63-8532-CF6B18BC3B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD196590-9A24-4A63-8532-CF6B18BC3B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10974E78-31B4-4434-9643-CA4D92086500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10974E78-31B4-4434-9643-CA4D92086500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10974E78-31B4-4434-9643-CA4D92086500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10974E78-31B4-4434-9643-CA4D92086500}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD196590-9A24-4A63-8532-CF6B18BC3B0F} = {B92CFB7B-82E2-487E-8700-2C96BBFC5AC8}
+		{D7E1B12E-DA5D-4C67-9549-84AAE88E0EA9} = {D2CCA856-E883-4929-ADB8-8031793AD6D4}
+		{10974E78-31B4-4434-9643-CA4D92086500} = {D2CCA856-E883-4929-ADB8-8031793AD6D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABE65FEF-03D6-4526-BFEE-6E022D3128CB}
+	EndGlobalSection
+EndGlobal
