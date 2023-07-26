@@ -11,9 +11,7 @@ namespace API_Academia.Controllers
         [HttpPost("InserirCliente")]
         public string InserirCliente(Cliente infoCliente)
         {
-            new ClienteApplication().CadastroDeCliente(infoCliente);
-
-            return "Cadastro efetuado com sucesso!!!";
+            return new ClienteApplication().CadastroDeCliente(infoCliente);
         }
 
         [HttpGet("ListaCliente")]
@@ -28,6 +26,17 @@ namespace API_Academia.Controllers
             return new ClienteApplication().EditarInfoClientes(infoCliente);
         }
 
+        [HttpPost("PagamentoMensalidade")]
+        public bool PagaMensalidade(int Id)
+        {
+            return new ClienteApplication().PagamentoMensalidade(Id);
+        }
+
+        [HttpDelete("InativaCliente")]
+        public bool InativaCliente(int Id)
+        {
+            return new ClienteApplication().InativarCliente(Id);
+        }
 
     }
 }

@@ -1,10 +1,11 @@
 ﻿using API_Academia.Models.Clientes;
+using System.Security.Cryptography.X509Certificates;
 
 namespace API_Academia.Application.Clientes
 {
     public class ClienteApplication
     {
-        public bool CadastroDeCliente(Cliente infoCliente)
+        public string CadastroDeCliente(Cliente infoCliente)
         {
 			try
 			{
@@ -12,12 +13,12 @@ namespace API_Academia.Application.Clientes
 
                 listaCliente.Add(infoCliente);
 
-				return true;
+				return "Cliente cadastrado com sucesso!!!";
 			}
 
 			catch (Exception e)
 			{
-                return false;
+                return $"Erro ao cadastrar o Cliente, Message:{e.Message}";
             }
         }
 
@@ -67,6 +68,71 @@ namespace API_Academia.Application.Clientes
             memoriaCliente.DataCadastro = infoCliente.DataCadastro;
 
             return memoriaCliente;
+        }
+
+        public bool PagamentoMensalidade(int Id)
+        {
+            var listaCliente = new List<Cliente>();
+            var memoriaCliente1 = new Cliente();
+            var memoriaCliente2 = new Cliente();
+
+            memoriaCliente1.Id = 1;
+            memoriaCliente1.Pago = false;
+
+            memoriaCliente2.Id = 2;
+            memoriaCliente2.Pago = true;
+
+            listaCliente.Add(memoriaCliente1);
+            listaCliente.Add(memoriaCliente2);
+
+            try
+            {
+                var Pago = listaCliente.Find(x => x.Id == Id).Pago;
+
+                if (Pago == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    listaCliente.Find(x => x.Id == Id).Pago = true;
+
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool InativarCliente(int Id)
+        {
+            var listaCliente = new List<Cliente>();
+
+            listaCliente.Add(new Cliente { Id = 1, Nome = "Raphael", Idade = 24, Ativo = 1, Mensalidade = 200, DataCadastro = DateTime.Now});
+            listaCliente.Add(new Cliente { Id = 2, Nome = "Alisson", Idade = 25, Ativo = 1, Mensalidade = 150, DataCadastro = DateTime.Now });
+
+            try
+            {
+                var statusCliente = listaCliente.Find(x => x.Id == Id);
+                statusCliente.Ativo = 0;
+
+                if (statusCliente.Ativo == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    listaCliente.Find(x => x.Id == Id).Ativo = 1;
+
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

@@ -6,5 +6,6 @@ namespace API_Academia.Models.Clientes
     {
         public double Mensalidade { get; set; }
         public DateTime DataCadastro { get; set; }
+        public bool Pago { get; set; }
     }
 }
